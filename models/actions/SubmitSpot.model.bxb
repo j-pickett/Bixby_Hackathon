@@ -14,10 +14,6 @@ action (SubmitSpot) {
       type (description)
       min (Required) max (One)
     }
-    input (isSigningUp) {
-      type (IsSigningUp)
-      min (Required) max (One)
-    }
   }
   output (Spot)
 }
