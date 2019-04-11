@@ -6,8 +6,8 @@ action (SubmitSpot) {
       type (SpotName)
       min (Required) max (One)
     }
-    input (email) {
-      type(Email)
+    input (category) {
+      type(Category)
       min (Required) max(One)
     }
     input (description) {

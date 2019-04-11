@@ -2,7 +2,7 @@ endpoints {
 
   action-endpoints {
     action-endpoint (SubmitSpot) {
-      accepted-inputs (spotName, email, description, isSigningUp)
+      accepted-inputs (spotName, category, description, isSigningUp)
       local-endpoint (submitSpot.js)
     }
     action-endpoint (FindPersons) {

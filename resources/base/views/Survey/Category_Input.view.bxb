@@ -1,0 +1,29 @@
+input-view {
+  match {
+    Category (category) { 
+      to-input: SubmitSpot
+    }
+  }
+  message {
+    template ("What kind of Spot is this?")
+  }
+  render {
+    form {
+      elements {
+        text-input {
+          id (category)
+          label (Category)
+          type (Category)
+          max-length (50)
+          // Add client side validation on category field
+          //pattern-type (category)
+          value ("#{raw(category)}")
+        }
+      }
+      on-submit {
+        goal: Category
+        value: viv.core.FormElement(category)
+      }
+    }
+  }
+}
