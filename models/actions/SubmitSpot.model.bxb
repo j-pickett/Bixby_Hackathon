@@ -1,13 +1,13 @@
 action (SubmitSpot) {
   description (An action that takes a required Spot as an input)
-  type (Commit)
+  type (Constructor)
   collect {
-    input (spotName) {
-      type (SpotName)
+    input (category) {
+      type (Category)
       min (Required) max (One)
     }
-    input (category) {
-      type(Category)
+    input (spotName) {
+      type(SpotName)
       min (Required) max(One)
     }
     input (description) {

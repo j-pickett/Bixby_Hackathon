@@ -3,19 +3,20 @@ result-view {
     Spot (this)
   }
 
-  message ("Thank you for your Spot")
+  message ("Thank you for your Spot.")
+  message ("Overview for your spot:")
   render {
     layout {
       section {
             content {
               single-line {
                 text {
-                  value ("Spot Name: #{raw(spotName)}")
+                  value ("Spot Name: #{raw(category)}")
                 }
               }
               single-line {
                     text {
-                      value ("Category: #{raw(category)}")
+                      value ("Category: #{raw(spotName)}")
                 }
               }
               paragraph {
