@@ -14,7 +14,7 @@ input-view {
           id (spotName)
           label (Spot Name)
           type (SpotName)
-          max-length (50)
+          max-length (16)
           value ("#{raw(spotName)}")
         }
       }

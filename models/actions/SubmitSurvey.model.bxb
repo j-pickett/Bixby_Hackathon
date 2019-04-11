@@ -10,8 +10,8 @@ action (SubmitSpot) {
       type(Email)
       min (Required) max(One)
     }
-    input (comments) {
-      type (Comments)
+    input (description) {
+      type (description)
       min (Required) max (One)
     }
     input (isSigningUp) {

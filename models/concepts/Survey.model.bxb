@@ -7,8 +7,8 @@ structure (Spot) {
     type(Email)
     min (Required) max(One)
   }
-  property (comments) {
-    type (Comments)
+  property (description) {
+    type (description)
     min (Optional) max (One)
   }
   property (isSigningUp) {
