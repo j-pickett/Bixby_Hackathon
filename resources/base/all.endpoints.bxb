@@ -6,8 +6,8 @@ endpoints {
       local-endpoint (submitSpot.js)
     }
     action-endpoint (CommitSpot) {
-      accepted-inputs (spotName, category, description)
-      local-endpoint (commitspot.js)
+      accepted-inputs (spotName, category, description, isSigningUp)
+      local-endpoint (commitSpot.js)
     }
   }
 }

@@ -1,9 +1,0 @@
-endpoints {
-  //endpoints should take in voice in form of cat->title->desc from spots.js
-   action-endpoints {
-     action-endpoint (GetSpot) {
-       accepted-inputs (category, title, desc)
-       local-endpoint ("spots.js")
-     }
-   }
-}

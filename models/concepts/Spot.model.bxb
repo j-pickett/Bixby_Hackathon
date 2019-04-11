@@ -15,4 +15,4 @@ structure (Spot) {
     type (IsSigningUp)
     min (Required) max (One)
   }
-  }
+}

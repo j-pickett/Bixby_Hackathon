@@ -1,0 +1,25 @@
+action (CommitSpot) {
+  description (An action that takes a required Spot as an input)
+  type (Calculation)
+  collect {
+    input (spotName) {
+      type (SpotName)
+      min (Required)
+      default-init {
+        intent {
+          goal: SubmitSpot
+          //value: SearchTerm("")
+        }
+      }
+    }
+    input (category) {
+      type(Category)
+      min (Required) max(One)
+    }
+    input (description) {
+      type (description)
+      min (Required) max (One)
+    }
+  }
+  output (Spot)
+}
