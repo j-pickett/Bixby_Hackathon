@@ -1,11 +1,11 @@
 result-view {
   match {
-    Survey {
-      from-output: SubmitSurvey
+    Spot {
+      from-output: SubmitSpot
     }
   }
 
-  message ("Thank you for your survey!")
+  message ("Thank you for your Spot!")
 
   render {
     // Show nothing on the layout. You can customize the layout here.

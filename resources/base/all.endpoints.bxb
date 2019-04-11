@@ -1,9 +1,9 @@
 endpoints {
 
   action-endpoints {
-    action-endpoint (SubmitSurvey) {
+    action-endpoint (SubmitSpot) {
       accepted-inputs (spotName, email, comments, isSigningUp)
-      local-endpoint (submitSurvey.js)
+      local-endpoint (submitSpot.js)
     }
     action-endpoint (FindPersons) {
       accepted-inputs ()

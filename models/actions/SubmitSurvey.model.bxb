@@ -1,5 +1,5 @@
-action (SubmitSurvey) {
-  description (An action that takes a required survey as an input)
+action (SubmitSpot) {
+  description (An action that takes a required Spot as an input)
   type (Calculation)
   collect {
     input (spotName) {
@@ -19,5 +19,5 @@ action (SubmitSurvey) {
       min (Required) max (One)
     }
   }
-  output (Survey)
+  output (Spot)
 }

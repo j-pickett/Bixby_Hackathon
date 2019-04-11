@@ -1,7 +1,7 @@
 input-view {
   match {
     IsSigningUp (isSigningUp) { 
-      to-input: SubmitSurvey
+      to-input: SubmitSpot
     }
   }
 
@@ -17,7 +17,7 @@ input-view {
           type (IsSigningUp)
           primary-text("Mailing List")
           secondary-text("Receive monthly updates from our company")
-          value("{raw(survey.isSigningUp)}")
+          value("{raw(Spot.isSigningUp)}")
         }
       }
       on-submit {

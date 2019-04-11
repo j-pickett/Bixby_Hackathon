@@ -1,4 +1,4 @@
-structure (Survey) {
+structure (Spot) {
   property (spotName) {
     type (SpotName)
     min (Required) max (One)
