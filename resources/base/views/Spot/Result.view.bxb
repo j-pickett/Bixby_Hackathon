@@ -1,4 +1,4 @@
-confirmation-view {
+input-view {
   match {
     Spot (this)
   }
