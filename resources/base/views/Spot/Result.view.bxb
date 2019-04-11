@@ -5,7 +5,7 @@ result-view {
     }
   }
 
-  message ("Confirm This is Your Spot!")
+  message ("Does all of this look correct?")
 
   render {
    form {
