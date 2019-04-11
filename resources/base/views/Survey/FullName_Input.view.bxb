@@ -1,0 +1,27 @@
+input-view {
+  match {
+    SpotName (spotName) { 
+      to-input: SubmitSurvey
+    }
+  }
+  message {
+    template ("What is your spot name?")
+  }
+  render {
+    form {
+      elements {
+        text-input {
+          id (spotName)
+          label (Spot Name)
+          type (SpotName)
+          max-length (50)
+          value ("#{raw(spotName)}")
+        }
+      }
+      on-submit {
+        goal: SpotName
+        value: viv.core.FormElement(spotName)
+      }
+    }
+  }
+}
