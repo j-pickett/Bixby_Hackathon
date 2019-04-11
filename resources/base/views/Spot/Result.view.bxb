@@ -1,8 +1,30 @@
-input-view {
+result-view {
   match {
     Spot (this)
   }
 
-  message ("#{raw(spotName)}")
-
+  message ("Thank you for your Spot")
+  render {
+    layout {
+      section {
+            content {
+              single-line {
+                text {
+                  value ("Spot Name: #{raw(spotName)}")
+                }
+              }
+              single-line {
+                    text {
+                      value ("Category: #{raw(category)}")
+                }
+              }
+              paragraph {
+                    value {
+                      template ("Description: #{raw(description)}")
+                }
+              }
+            }
+          }
+      }
+    }
   }
