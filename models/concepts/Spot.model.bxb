@@ -11,8 +11,4 @@ structure (Spot) {
     type (description)
     min (Optional) max (One)
   }
-  property (isSigningUp) {
-    type (IsSigningUp)
-    min (Required) max (One)
-  }
 }

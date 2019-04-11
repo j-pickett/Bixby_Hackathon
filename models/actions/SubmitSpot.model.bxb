@@ -1,6 +1,6 @@
 action (SubmitSpot) {
   description (An action that takes a required Spot as an input)
-  type (Calculation)
+  type (Commit)
   collect {
     input (spotName) {
       type (SpotName)

@@ -1,19 +1,8 @@
-result-view {
+confirmation-view {
   match {
-    Spot {
-      from-output: SubmitSpot
-    }
+    Spot (this)
   }
 
-  message ("Does all of this look correct?")
+  message ("#{raw(spotName)}")
 
-  render {
-   form {
-      submit-button(Edit Spot)
-        on-submit {
-        goal: intent: SubmitSpot
-        value: viv.core.FormElement(EditSpot)
-      }
-    }
-  }
   }

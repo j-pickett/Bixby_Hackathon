@@ -2,24 +2,23 @@ action (CommitSpot) {
   description (An action that takes a required Spot as an input)
   type (Constructor)
   collect {
-    input (spotName) {
+    input-group (changed-item-properties) {
+      requires (OneOrMoreOf)
+      collect {
+
+        //the new size (straight from a prompt) to be assigned to the item
+         input (spotName) {
       type (SpotName)
       min (Required)
       default-init {
         intent {
-          goal: SubmitSpot
+          goal: GetSpotName
           //value: SearchTerm("")
         }
       }
     }
-    input (category) {
-      type(Category)
-      min (Required) max(One)
-    }
-    input (description) {
-      type (description)
-      min (Required) max (One)
-    }
+        }
   }
-  output (Spot)
+}
+   output (Spot)
 }
