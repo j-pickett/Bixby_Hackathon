@@ -4,7 +4,7 @@ result-view {
   }
 
   message ("Thank you for your Spot.")
-  message ("Overview for your spot:")
+
   render {
     layout {
       section {
