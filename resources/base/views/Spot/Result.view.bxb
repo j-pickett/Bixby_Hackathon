@@ -11,12 +11,12 @@ result-view {
             content {
               single-line {
                 text {
-                  value ("Spot Name: #{raw(category)}")
+                  value ("Category: #{raw(category)}")
                 }
               }
               single-line {
                     text {
-                      value ("Category: #{raw(spotName)}")
+                      value ("Spot Name: #{raw(spotName)}")
                 }
               }
               paragraph {
