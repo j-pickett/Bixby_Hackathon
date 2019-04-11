@@ -14,7 +14,7 @@ input-view {
           id (category)
           label (Category)
           type (Category)
-          max-length (50)
+          max-length (15)
           // Add client side validation on category field
           //pattern-type (category)
           value ("#{raw(category)}")
