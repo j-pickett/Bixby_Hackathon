@@ -1,0 +1,16 @@
+enum (Categories) {
+
+  // Spot categories
+  symbol (BMX)
+  symbol (Drift)
+  symbol (Fishing)
+  symbol (Graffiti)
+  symbol (Hiking)
+  symbol (Skate)
+  symbol (Smoke)
+  symbol (Stargazing)
+  symbol (Longboarding)
+  symbol (Mountain Biking)
+  symbol (Parkour)
+  symbol (Photography)
+}  
