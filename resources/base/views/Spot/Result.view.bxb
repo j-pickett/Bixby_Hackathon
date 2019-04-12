@@ -11,7 +11,7 @@ result-view {
             content {
               single-line {
                 text {
-                  value ("Category: #{raw(category)}")
+                  value ("Category: #{raw(categories)}")
                 }
               }
               single-line {

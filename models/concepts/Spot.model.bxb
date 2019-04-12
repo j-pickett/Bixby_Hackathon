@@ -1,6 +1,6 @@
 structure (Spot) {
-  property (category) {
-    type (Category)
+  property (categories) {
+    type (Categories)
     min (Required) max (One)
   }
   property (spotName) {

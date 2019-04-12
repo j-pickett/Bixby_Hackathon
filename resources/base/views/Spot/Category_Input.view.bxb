@@ -13,7 +13,7 @@ input-view {
         cell-card {
           on-click {
             intent {
-              goal: Category
+              goal: Categories
               value: $expr(one)
             }
           }
