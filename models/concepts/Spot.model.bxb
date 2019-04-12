@@ -8,7 +8,7 @@ structure (Spot) {
     min (Required) max(One)
   }
   property (description) {
-    type (description)
+    type (Description)
     min (Optional) max (One)
   }
   property (Location) {

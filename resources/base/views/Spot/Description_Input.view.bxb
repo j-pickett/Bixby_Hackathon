@@ -1,6 +1,6 @@
 input-view {
   match {
-    description (description) { 
+    Description (description) { 
       to-input: SubmitSpot
     }
   }
@@ -11,16 +11,16 @@ input-view {
     form {
       elements {
         textarea {
-          id (description)
-          type (description)
+          id (Description)
+          type (Description)
           label (Description)
           max-length (140)
           value ("#{raw(description)}")
         }
       }
       on-submit {
-        goal: description
-        value: viv.core.FormElement(description)
+        goal: Description
+        value: viv.core.FormElement(Description)
       }
     }
   }

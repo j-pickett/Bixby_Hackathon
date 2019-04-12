@@ -18,7 +18,7 @@ action (SubmitSpot) {
       min (Required) max(One)
     }
     input (description) {
-      type (description)
+      type (Description)
       min (Required) max (One)
     }
     input (location) {
