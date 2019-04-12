@@ -1,6 +1,6 @@
 input-view {
   match {
-    Category (category) { 
+    Categories (categories) { 
       to-input: SubmitSpot
     }
   }
@@ -8,21 +8,23 @@ input-view {
     template ("What kind of Spot is this?")
   }
   render {
-    form {
-      elements {
-        text-input {
-          id (category)
-          label (Category)
-          type (Category)
-          max-length (15)
-          // Add client side validation on category field
-          //pattern-type (category)
-          value ("#{raw(category)}")
+      selection-of (categories) {
+      where-each (one) { 
+        cell-card {
+          on-click {
+            intent {
+              goal: Category
+              value: $expr(one)
+            }
+          }
+          slot2 {
+            content {
+              primary {
+                template ("#{value (one)}")
+              }
+            }
+          }          
         }
-      }
-      on-submit {
-        goal: Category
-        value: viv.core.FormElement(category)
       }
     }
   }

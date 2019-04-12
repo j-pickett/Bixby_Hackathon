@@ -1,9 +1,9 @@
-module.exports.function = function submitSpot (spotName, category, description, location) {
+module.exports.function = function submitSpot (spotName, categories, description, location) {
   // Simply construct an object from the inputs and return it.
   // This is where your API call to submit a Spot will be (if desired).
   return {
     spotName: spotName,
-    category: category,
+    categories: categores,
     description: description,
     Location: location
   };
