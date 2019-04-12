@@ -1,9 +1,0 @@
-action (GetSpotName) {
-  collect {
-    input (spotName) {
-      type (SpotName)
-    }
-  }
-  output (SpotName)
-  type (Fetch)
-}
