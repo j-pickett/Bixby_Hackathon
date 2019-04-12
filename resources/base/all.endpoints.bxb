@@ -2,12 +2,8 @@ endpoints {
 
   action-endpoints {
     action-endpoint (SubmitSpot) {
-      accepted-inputs (spotName, category, description)
+      accepted-inputs (spotName, category, description, sourcePoint)
       local-endpoint (submitSpot.js)
-    }
-    action-endpoint (CommitSpot) {
-      accepted-inputs (spotName, category, description)
-      local-endpoint (commitSpot.js)
     }
   }
 }
