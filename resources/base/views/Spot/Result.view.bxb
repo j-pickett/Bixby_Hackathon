@@ -35,7 +35,7 @@ result-view {
                 }
                 markers {
                   marker {
-                    geo ("SourcePoint.point")
+                    geo ("Location.point")
                     icon {
                       template (/images/icons/green-marker.png)
                     }

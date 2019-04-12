@@ -11,8 +11,8 @@ structure (Spot) {
     type (description)
     min (Optional) max (One)
   }
-  property (SourcePoint) {
-    type (SourcePoint)
+  property (Location) {
+    type (Location)
     min (Optional) max (One)
   }
 }

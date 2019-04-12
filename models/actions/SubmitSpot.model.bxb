@@ -14,14 +14,14 @@ action (SubmitSpot) {
       type (description)
       min (Required) max (One)
     }
-    input (sourcePoint) {
-      type (SourcePoint)
+    input (location) {
+      type (Location)
       min (Required) max (One)
       default-init {
         // Note: To enable current location access, in your capsule.bxb,
         // add 'user-profile-access' to capsule.permissions
         intent {
-          goal: SourcePoint
+          goal: Location
           route: geo.CurrentLocation
         }
       }
