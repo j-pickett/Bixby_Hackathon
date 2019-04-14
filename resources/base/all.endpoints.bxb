@@ -6,7 +6,7 @@ endpoints {
       local-endpoint (submitSpot.js)
     }
     action-endpoint (FindSpots) {
-      accepted-inputs (categories, location)
+      accepted-inputs (categories, location, distance)
       local-endpoint (findSpots.js)
     }
 }

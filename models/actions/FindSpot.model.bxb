@@ -25,6 +25,10 @@ action (FindSpots) {
         }
       }
     }
+    input (distance) {
+    type(Distance)
+    min (Optional) max(One)
+    }
   }
   output (Spot)
 }

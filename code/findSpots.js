@@ -1,4 +1,4 @@
-function distance(lat1, lon1, lat2, lon2, unit) {
+function distanceFind(lat1, lon1, lat2, lon2, unit) {
   
 	if ((lat1 == lat2) && (lon1 == lon2)) {
 		return 0;
@@ -22,25 +22,26 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 	}
 }
 
-module.exports.function = function findSpot (categories, location) {
+module.exports.function = function findSpot (categories, location, distance) {
   var url = "https://maljean.github.io/SpotsDB/spots.json"
   var http = require('http')
   var console = require('console')
   var config = require('config')
   var test = http.getUrl(url, {format: 'text'})
   var ret = JSON.parse(test)
-
   var spots = [];
   
-  for (var i = 0; i < ret.length; i++) {
-    if (ret[i].categories == categories) {
-      spots.push(ret[i])
-    }
+  if (!distance) {
+    distance = 5
   }
   for (var i = 0; i < ret.length; i++) {
     if (ret[i].categories == categories) {
-      ret[i].distance = distance(ret[i].Location.point.latitude, ret[i].Location.point.longitude, location.point.latitude, location.point.longitude, "M")
-      spots.push(ret[i])
+      ret[i].distance = distanceFind(ret[i].Location.point.latitude,
+                                 ret[i].Location.point.longitude,
+                                 location.point.latitude, location.point.longitude, "M")
+      if (ret[i].distance <= distance) {
+        spots.push(ret[i])
+      }
     }
   }
   return spots

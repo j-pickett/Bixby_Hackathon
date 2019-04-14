@@ -1,0 +1,5 @@
+train (t-uxguqrnuz36hda7qdo4mb5fc2) {
+  utterance ("[g:SelectSpot] Find a (skate)[v:Categories:Skate] spot")
+  plan (Y2BjEEqtSMwtyEnVKy7ILynWCwaSDBJoYqk5qcklYBlsqsVRxdwy81JA4sXoxjgnlqSm5xdlphYziKHK+OQnJ5Zk5ucxsDIwMjAxMDOwAFkMUDYzkGYAYxBgArJYGBgA)
+  last-modified (1555234502203)
+}
