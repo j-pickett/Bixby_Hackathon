@@ -5,7 +5,7 @@ input-view {
     }
   }
   message {
-    template ("What kind of Spot is this?")
+    template ("What kind of Spot?")
   }
   render {
       selection-of (categories) {
