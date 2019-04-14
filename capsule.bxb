@@ -1,5 +1,5 @@
 capsule {
-  id (example.inputForm)
+  id (example.spots)
   version (0.1.0)
   format (3)
   targets {
