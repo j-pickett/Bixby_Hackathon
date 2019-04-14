@@ -5,9 +5,9 @@ endpoints {
       accepted-inputs (spotName, categories, description, location)
       local-endpoint (submitSpot.js)
     }
-    action-endpoint (FindDistance) {
-      accepted-inputs (current, spotdest)
-      local-endpoint (SpotDistance.js)
+    action-endpoint (FindSpots) {
+      accepted-inputs (categories, location)
+      local-endpoint (findSpots.js)
     }
 }
 }
