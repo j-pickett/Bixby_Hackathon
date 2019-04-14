@@ -17,7 +17,8 @@ function submitSpot (spotName, categories, description, location) {
     Location: location
   };
   
-  return ret[0]
+  ret.push(spot)
+  return ret[2]
 }
 
 module.exports = submitSpot
