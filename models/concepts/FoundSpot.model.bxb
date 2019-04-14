@@ -1,5 +1,4 @@
-structure (DestinationPoint) {
+structure (FoundSpot) {
   description (The destination geo NamedPoint)
   role-of (geo.NamedPoint)
 }
- 
