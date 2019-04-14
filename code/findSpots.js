@@ -17,6 +17,7 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 		dist = dist * 60 * 1.1515;
 		if (unit=="K") { dist = dist * 1.609344 }
 		if (unit=="N") { dist = dist * 0.8684 }
+    dist = Math.round(dist * 10) / 10
 		return dist;
 	}
 }
@@ -38,9 +39,7 @@ module.exports.function = function findSpot (categories, location) {
   }
   for (var i = 0; i < ret.length; i++) {
     if (ret[i].categories == categories) {
-      ret[i].distance = distance(ret[i].Location.point.latitude, ret[i].Location.point.longitude,
-                                 location.point.latitude, location.point.longitude,
-                                "M")
+      ret[i].distance = distance(ret[i].Location.point.latitude, ret[i].Location.point.longitude, location.point.latitude, location.point.longitude, "M")
       spots.push(ret[i])
     }
   }
