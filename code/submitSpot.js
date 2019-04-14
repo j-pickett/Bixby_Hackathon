@@ -9,14 +9,14 @@ function submitSpot (spotName, categories, description, location) {
   //};
   var test = http.getUrl(url, {format: 'text'})
   var ret = JSON.parse(test)
-    
+  
   var spot = {
     spotName: spotName,
     categories: categories,
     description: description,
     Location: location
   };
-  ret.Loaction = location
+  
   return ret[0]
 }
 
