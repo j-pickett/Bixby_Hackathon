@@ -9,6 +9,12 @@ input-view {
   }
   render {
       selection-of (categories) {
+      navigation-mode {
+        read-none {
+          list-summary ("") // optional
+          item-selection-question("Select a spot category")
+        }
+      }
       where-each (one) { 
         cell-card {
           on-click {
