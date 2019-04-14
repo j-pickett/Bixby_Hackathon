@@ -15,4 +15,8 @@ structure (Spot) {
     type (Location)
     min (Optional) max (One)
   }
+  property (distance) {
+    type (Distance)
+    min (Optional) max (One)
+  }
 }

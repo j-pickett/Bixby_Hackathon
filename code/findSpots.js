@@ -1,4 +1,27 @@
-module.exports.function = function findSpot (categories, Location) {
+function distance(lat1, lon1, lat2, lon2, unit) {
+  
+	if ((lat1 == lat2) && (lon1 == lon2)) {
+		return 0;
+	}
+	else {
+		var radlat1 = Math.PI * lat1/180;
+		var radlat2 = Math.PI * lat2/180;
+		var theta = lon1-lon2;
+		var radtheta = Math.PI * theta/180;
+		var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+		if (dist > 1) {
+			dist = 1;
+		}
+		dist = Math.acos(dist);
+		dist = dist * 180/Math.PI;
+		dist = dist * 60 * 1.1515;
+		if (unit=="K") { dist = dist * 1.609344 }
+		if (unit=="N") { dist = dist * 0.8684 }
+		return dist;
+	}
+}
+
+module.exports.function = function findSpot (categories, location) {
   var url = "https://maljean.github.io/SpotsDB/spots.json"
   var http = require('http')
   var console = require('console')
@@ -6,5 +29,20 @@ module.exports.function = function findSpot (categories, Location) {
   var test = http.getUrl(url, {format: 'text'})
   var ret = JSON.parse(test)
 
-  return ret
+  var spots = [];
+  
+  for (var i = 0; i < ret.length; i++) {
+    if (ret[i].categories == categories) {
+      spots.push(ret[i])
+    }
+  }
+  for (var i = 0; i < ret.length; i++) {
+    if (ret[i].categories == categories) {
+      ret[i].distance = distance(ret[i].Location.point.latitude, ret[i].Location.point.longitude,
+                                 location.point.latitude, location.point.longitude,
+                                "M")
+      spots.push(ret[i])
+    }
+  }
+  return spots
 }
