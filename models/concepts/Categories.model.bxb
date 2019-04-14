@@ -12,6 +12,7 @@ enum (Categories) {
   symbol (Skate)
   symbol (Smoke)
   symbol (Stargazing)
+  symbol (Larping)
   symbol (Longboarding)
   symbol (Mountain Biking)
   symbol (Offroading)

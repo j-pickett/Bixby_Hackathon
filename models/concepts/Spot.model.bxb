@@ -1,11 +1,11 @@
 structure (Spot) {
   property (categories) {
     type (Categories)
-    min (Required) max (One)
+    min (Optional) max (One)
   }
   property (spotName) {
     type(SpotName)
-    min (Required) max(One)
+    min (Optional) max(One)
   }
   property (description) {
     type (Description)
