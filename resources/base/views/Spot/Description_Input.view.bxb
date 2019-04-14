@@ -14,7 +14,7 @@ input-view {
           id (Description)
           type (Description)
           label (Description)
-          max-length (140)
+          max-length (320)
           value ("#{raw(description)}")
         }
       }
