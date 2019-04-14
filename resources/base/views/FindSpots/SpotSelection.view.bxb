@@ -9,17 +9,54 @@ input-view {
     // used to iterate over the list of candidates
     selection-of (this) {
       where-each (one) {
-        // you can use conditional logic to control how candidates are displayed, using either a standard layout with a match pattern, or a layout macro
+        // you can use conditional logic to control how candidates are displayed,
+        // using either a standard layout with a match pattern, or a layout macro
 
-        cell-card {
-          slot2 {
-            content {
-              primary {
-                template ("#{value (one.spotName)}")
+        compound-card {
+          content {
+            map-card {
+              aspect-ratio (1:1)
+              title-area{
+                slot2 {
+                  single-line {
+                    spacer
+                  }
+                }
               }
-              secondary {
-                template ("#{value (one.categories)} spot #{value (one.distance)} Miles away")
+              markers {
+                marker {
+                  geo ("Location.point")
+                  icon {
+                    template (/images/icons/red-marker.png)
+                  }
+                  width (15)
+                  height (20)
+                  anchor-x (5)
+                  anchor-y (15)
+                  rotation (0)
+                }
               }
+            }
+            paragraph {
+              value {
+                template ("#{raw(description)}")
+              }
+              style (Detail_L)
+            }
+          }
+          chin {
+            slot1 {
+              single-line {
+                text {
+                  value {
+                    template ("#{value (one.spotName)}")
+                  }
+                  style (Title_M)
+                }
+              }
+            }
+            slot2 {
+              template ("#{value (one.distance)} Miles away")
             }
           }
         }
