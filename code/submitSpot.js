@@ -3,10 +3,6 @@ function submitSpot (spotName, categories, description, location) {
   var http = require('http')
   var console = require('console')
   var config = require('config')
-  var options
-  // = {
-  //  format: 'json'
-  //};
   var test = http.getUrl(url, {format: 'text'})
   var ret = JSON.parse(test)
   
@@ -18,7 +14,7 @@ function submitSpot (spotName, categories, description, location) {
   };
   
   ret.push(spot)
-  return ret[2]
+  return spot
 }
 
 module.exports = submitSpot
