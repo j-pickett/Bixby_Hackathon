@@ -6,6 +6,7 @@ enum (Categories) {
   symbol (BMX)
   symbol (Drift)
   symbol (Fishing)
+  symbol (Film)
   symbol (Graffiti)
   symbol (Hiking)
   symbol (Kite Flying)
