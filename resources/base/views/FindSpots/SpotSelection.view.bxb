@@ -15,14 +15,21 @@ input-view {
         compound-card {
           content {
             map-card {
-              aspect-ratio (1:1)
-              title-area{
-                slot2 {
+              title-area {
+                slot1 {
+                  text {
+                    value("#{value (one.spotName)}")
+                  }
+                }
+                slot3 {
                   single-line {
-                    spacer
+                    text {
+                      value("#{value (one.distance)} Miles away")
+                    }
                   }
                 }
               }
+              aspect-ratio (1:1)
               markers {
                 marker {
                   geo ("Location.point")
@@ -42,21 +49,6 @@ input-view {
                 template ("#{raw(description)}")
               }
               style (Detail_L)
-            }
-          }
-          chin {
-            slot1 {
-              single-line {
-                text {
-                  value {
-                    template ("#{value (one.spotName)}")
-                  }
-                  style (Title_M)
-                }
-              }
-            }
-            slot2 {
-              template ("#{value (one.distance)} Miles away")
             }
           }
         }
