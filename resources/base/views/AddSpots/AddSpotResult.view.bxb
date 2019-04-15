@@ -3,7 +3,7 @@ result-view {
     Spot (this)
   }
 
-  message ("Thank you for your Spot.")
+  message ("Your Spot.")
   
   render {
     layout {
