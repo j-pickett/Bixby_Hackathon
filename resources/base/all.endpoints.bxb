@@ -9,5 +9,9 @@ endpoints {
       accepted-inputs (categories, location, distance)
       local-endpoint (findSpots.js)
     }
+    action-endpoint (ConstructDestination) {
+      accepted-inputs (spot)
+      local-endpoint (ConstructDestination.js)
+    }
 }
 }
