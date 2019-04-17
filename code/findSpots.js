@@ -23,24 +23,35 @@ function distanceFind(lat1, lon1, lat2, lon2, unit) {
 }
 
 module.exports.function = function findSpot (categories, location, distance) {
-  var url = "https://maljean.github.io/SpotsDB/spots.json"
+  var url = "http://7b83b5c1.ngrok.io/spots"
   var http = require('http')
   var console = require('console')
   var config = require('config')
   var test = http.getUrl(url, {format: 'text'})
   var ret = JSON.parse(test)
   var spots = [];
+  var template
   
   if (!distance) {
     distance = 5
   }
-  for (var i = 0; i < ret.length; i++) {
+for (var i = 0; i < ret.length; i++) {
     if (ret[i].categories == categories) {
-      ret[i].distance = distanceFind(ret[i].Location.point.latitude,
-                                 ret[i].Location.point.longitude,
-                                 location.point.latitude, location.point.longitude, "M")
+      ret[i].distance = distanceFind(ret[i].latitude,ret[i].longitude, location.point.latitude, location.point.longitude, "M")
       if (ret[i].distance <= distance) {
-        spots.push(ret[i])
+        template = {
+          spotName: ret[i].spotName,
+          categories: ret[i].categories,
+          description: ret[i].description,
+          distance: ret[i].distance,
+          Location: {
+            point: {
+              latitude: ret[i].latitude,
+              longitude: ret[i].longitude,
+            }
+          }
+        }
+        spots.push(template)
       }
     }
   }

@@ -1,19 +1,24 @@
 function submitSpot (spotName, categories, description, location) {
-  var url = "https://maljean.github.io/SpotsDB/spots.json"
+  var url = "http://7b83b5c1.ngrok.io/spots"
   var http = require('http')
   var console = require('console')
   var config = require('config')
   var test = http.getUrl(url, {format: 'text'})
   var ret = JSON.parse(test)
+  var time = new Date
   
   var spot = {
+    id: time.getTime(),
     spotName: spotName,
+    distance: 0,
     categories: categories,
     description: description,
+    latitude: location.point.latitude,
+    longitude: location.point.longitude,
     Location: location
   };
   
-  ret.push(spot)
+  http.postUrl(url, spot, {format: 'json'})
   return spot
 }
 
