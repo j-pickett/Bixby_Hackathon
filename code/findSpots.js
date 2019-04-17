@@ -23,7 +23,7 @@ function distanceFind(lat1, lon1, lat2, lon2, unit) {
 }
 
 module.exports.function = function findSpot (categories, location, distance) {
-  var url = "http://7b83b5c1.ngrok.io/spots"
+  var url = "http://30a70366.ngrok.io/spots"
   var http = require('http')
   var console = require('console')
   var config = require('config')

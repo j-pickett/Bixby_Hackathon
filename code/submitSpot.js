@@ -1,5 +1,5 @@
 function submitSpot (spotName, categories, description, location) {
-  var url = "http://7b83b5c1.ngrok.io/spots"
+  var url = "http://30a70366.ngrok.io/spots"
   var http = require('http')
   var console = require('console')
   var config = require('config')
