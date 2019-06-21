@@ -13,4 +13,4 @@ The video below is our presentation to the Bixby team of evangelists and develop
 It walks through adding a spot in the skate category and then us looking at the category to find the spot we added among the other examples.
 Sadly at the time Bixby did not allow camera access so instead of an image we used the map as a substitute. 
 
-[![Bixby Presentation]](https://drive.google.com/file/d/1dWSGGkevFDrukbryb-nFCmamZo6u2eYr/view)
+https://drive.google.com/file/d/1dWSGGkevFDrukbryb-nFCmamZo6u2eYr/view
